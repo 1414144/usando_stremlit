@@ -1,0 +1,173 @@
+MANUAL BÁSICO DE STREAMLIT
+==========================
+
+Librería: Streamlit
+Descripción: Framework de Python para crear interfaces web de forma rápida.
+
+--------------------------------------------------
+1. TEXTO (mostrar información)
+--------------------------------------------------
+
+Estos elementos sirven para mostrar contenido en pantalla.
+
+1.1 st.title()
+--------------
+Título principal (grande)
+
+Ejemplo:
+st.title("Mi aplicación")
+
+--------------------------------------------------
+
+1.2 st.header()
+---------------
+Subtítulo importante
+
+Ejemplo:
+st.header("Sección principal")
+
+--------------------------------------------------
+
+1.3 st.subheader()
+------------------
+Subsección
+
+Ejemplo:
+st.subheader("Detalles")
+
+--------------------------------------------------
+
+1.4 st.write()
+--------------
+Texto general (el más usado)
+
+Ejemplo:
+st.write("Hola mundo")
+
+Puede mostrar:
+- texto
+- números
+- listas
+- variables
+
+--------------------------------------------------
+
+1.5 st.caption()
+----------------
+Texto pequeño o descripción
+
+Ejemplo:
+st.caption("Este es un texto pequeño")
+
+--------------------------------------------------
+2. ENTRADAS (datos del usuario)
+--------------------------------------------------
+
+Sirven para que el usuario interactúe con la app.
+
+--------------------------------------------------
+
+2.1 st.text_input()
+-------------------
+Caja de texto
+
+Ejemplo:
+nombre = st.text_input("Tu nombre")
+
+Devuelve:
+- texto (string)
+
+--------------------------------------------------
+
+2.2 st.number_input()
+---------------------
+Entrada numérica
+
+Ejemplo:
+edad = st.number_input("Edad", min_value=0, max_value=100)
+
+Devuelve:
+- número (int o float)
+
+--------------------------------------------------
+
+2.3 st.selectbox()
+------------------
+Lista desplegable
+
+Ejemplo:
+opcion = st.selectbox("Elige", ["A", "B", "C"])
+
+Devuelve:
+- opción seleccionada
+
+--------------------------------------------------
+
+2.4 st.slider()
+---------------
+Barra deslizante
+
+Ejemplo:
+nivel = st.slider("Nivel", 0, 10)
+
+Devuelve:
+- número dentro del rango
+
+--------------------------------------------------
+
+2.5 st.checkbox()
+-----------------
+Casilla de verificación
+
+Ejemplo:
+acepta = st.checkbox("Acepto condiciones")
+
+Devuelve:
+- True o False
+
+--------------------------------------------------
+
+RESUMEN GENERAL
+--------------------------------------------------
+
+TEXTO:
+- st.title()
+- st.header()
+- st.subheader()
+- st.write()
+- st.caption()
+
+ENTRADAS:
+- st.text_input()
+- st.number_input()
+- st.selectbox()
+- st.slider()
+- st.checkbox()
+
+--------------------------------------------------
+
+EJEMPLO BÁSICO COMPLETO
+--------------------------------------------------
+
+import streamlit as st
+
+st.title("Ejemplo")
+
+nombre = st.text_input("Nombre")
+edad = st.number_input("Edad", 0, 100)
+
+st.write("Hola", nombre)
+st.write("Edad:", edad)
+
+--------------------------------------------------
+
+CONSEJO FINAL
+--------------------------------------------------
+
+Piensa siempre en este orden:
+
+1. Mostrar información (texto)
+2. Pedir datos (inputs)
+3. Procesar datos (lógica)
+4. Mostrar resultados
+
