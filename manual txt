@@ -171,3 +171,7 @@ Piensa siempre en este orden:
 3. Procesar datos (lógica)
 4. Mostrar resultados
 
+------------------------------------------------
+ejecutar porgrama 
+
+streamlit run progrma.py
